@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <defs>
+    <linearGradient id="bp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a3557"/>
+      <stop offset="1" stop-color="#06233b"/>
+    </linearGradient>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#bfe4ff" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="gridMaj" width="104" height="104" patternUnits="userSpaceOnUse">
+      <path d="M104 0H0V104" fill="none" stroke="#bfe4ff" stroke-width="0.6" opacity="0.10"/>
+    </pattern>
+    <marker id="tip" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#dcefff"/>
+    </marker>
+    <marker id="tipA" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#ffcf6b"/>
+    </marker>
+    <style>
+      .ink{fill:#dcefff}.dim{fill:#8fbfe4}.amb{fill:#ffcf6b}
+      .nm{fill:#eaf6ff;font-size:15px}.fn{fill:#8fbfe4;font-size:10px}
+      .tag{fill:#bfe4ff;font-size:9px;letter-spacing:.12em}
+      .art{fill:#dcefff;font-size:10px}
+      .box{fill:#ffffff;fill-opacity:.02;stroke:#bfe4ff;stroke-opacity:.55;stroke-width:1.4}
+      .tb{fill:#8fbfe4;font-size:8px;letter-spacing:.08em}.tv{fill:#eaf6ff;font-size:10px}
+    </style>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1000" height="520" fill="url(#bp)"/>
+  <rect x="22" y="22" width="956" height="476" fill="url(#grid)"/>
+  <rect x="22" y="22" width="956" height="476" fill="url(#gridMaj)"/>
+
+  <!-- drawing frame + corner ticks -->
+  <rect x="14" y="14" width="972" height="492" fill="none" stroke="#bfe4ff" stroke-opacity=".45" stroke-width="1.4"/>
+  <rect x="22" y="22" width="956" height="476" fill="none" stroke="#bfe4ff" stroke-opacity=".22"/>
+  <g stroke="#dcefff" stroke-width="1.2">
+    <path d="M22 36V22H36M964 22H978V36M22 484V498H36M978 484V498H964" fill="none" opacity=".7"/>
+  </g>
+
+  <!-- header -->
+  <text x="42" y="54" class="ink" font-size="16" letter-spacing=".22em">PLANNING SKILLS</text>
+  <text x="42" y="72" class="dim" font-size="11" letter-spacing=".05em">build workflow / schematic</text>
+  <line x1="42" y1="82" x2="360" y2="82" stroke="#bfe4ff" stroke-opacity=".3"/>
+
+  <!-- dimension line over the pipeline -->
+  <g stroke="#8fbfe4" stroke-opacity=".6" stroke-width="1">
+    <line x1="145" y1="128" x2="697" y2="128"/>
+    <line x1="145" y1="122" x2="145" y2="134"/>
+    <line x1="697" y1="122" x2="697" y2="134"/>
+  </g>
+  <text x="421" y="118" text-anchor="middle" class="tag">DESIGN → PLAN → BUILD</text>
+
+  <!-- part tags -->
+  <g>
+    <rect x="40" y="139" width="28" height="18" fill="#06233b" stroke="#bfe4ff" stroke-opacity=".55"/><text x="54" y="152" text-anchor="middle" class="tag">01</text>
+    <rect x="316" y="139" width="28" height="18" fill="#06233b" stroke="#bfe4ff" stroke-opacity=".55"/><text x="330" y="152" text-anchor="middle" class="tag">02</text>
+    <rect x="592" y="139" width="28" height="18" fill="#06233b" stroke="#bfe4ff" stroke-opacity=".55"/><text x="606" y="152" text-anchor="middle" class="tag">03</text>
+  </g>
+
+  <!-- module 01 -->
+  <rect class="box" x="40" y="150" width="210" height="120" rx="3"/>
+  <text x="145" y="200" text-anchor="middle" class="nm">brainstorming</text>
+  <text x="145" y="222" text-anchor="middle" class="fn">collaborative design,</text>
+  <text x="145" y="236" text-anchor="middle" class="fn">one question at a time</text>
+
+  <!-- module 02 -->
+  <rect class="box" x="316" y="150" width="210" height="120" rx="3"/>
+  <text x="421" y="200" text-anchor="middle" class="nm">writing-plans</text>
+  <text x="421" y="222" text-anchor="middle" class="fn">design becomes a</text>
+  <text x="421" y="236" text-anchor="middle" class="fn">zero-context plan</text>
+
+  <!-- module 03 -->
+  <rect class="box" x="592" y="150" width="210" height="120" rx="3"/>
+  <text x="697" y="200" text-anchor="middle" class="nm">executing-plans</text>
+  <text x="697" y="222" text-anchor="middle" class="fn">build in reviewed,</text>
+  <text x="697" y="236" text-anchor="middle" class="fn">test-first batches</text>
+
+  <!-- output terminal -->
+  <text x="913" y="146" text-anchor="middle" class="tag">OUTPUT</text>
+  <rect x="868" y="150" width="90" height="120" rx="3" fill="#ffffff" fill-opacity=".02" stroke="#bfe4ff" stroke-opacity=".5" stroke-dasharray="4 4"/>
+  <text x="913" y="205" text-anchor="middle" class="art">shipped</text>
+  <text x="913" y="222" text-anchor="middle" class="art">code</text>
+
+  <!-- flow connectors carrying artifacts -->
+  <line x1="250" y1="210" x2="310" y2="210" stroke="#dcefff" stroke-width="1.4" marker-end="url(#tip)"/>
+  <rect x="249" y="186" width="70" height="18" rx="2" fill="#06233b" stroke="#bfe4ff" stroke-opacity=".4"/>
+  <text x="284" y="199" text-anchor="middle" class="art">DESIGN.md</text>
+
+  <line x1="526" y1="210" x2="586" y2="210" stroke="#dcefff" stroke-width="1.4" marker-end="url(#tip)"/>
+  <rect x="527" y="186" width="60" height="18" rx="2" fill="#06233b" stroke="#bfe4ff" stroke-opacity=".4"/>
+  <text x="557" y="199" text-anchor="middle" class="art">PLAN.md</text>
+
+  <line x1="802" y1="210" x2="862" y2="210" stroke="#dcefff" stroke-width="1.4" marker-end="url(#tip)"/>
+
+  <!-- inspection risers to the gate -->
+  <g stroke="#ffcf6b" stroke-width="1.3" stroke-dasharray="3 4" opacity=".7">
+    <line x1="145" y1="270" x2="145" y2="330" marker-end="url(#tipA)"/>
+    <line x1="421" y1="270" x2="421" y2="330" marker-end="url(#tipA)"/>
+    <line x1="697" y1="270" x2="697" y2="330" marker-end="url(#tipA)"/>
+  </g>
+
+  <!-- skeptic inspection gate -->
+  <rect x="40" y="332" width="918" height="86" rx="4" fill="#ffcf6b" fill-opacity=".05" stroke="#ffcf6b" stroke-opacity=".65" stroke-width="1.3"/>
+  <text x="60" y="366" class="amb" font-size="15" letter-spacing=".14em">SKEPTIC</text>
+  <text x="60" y="388" class="amb" font-size="10.5" opacity=".8">inspection gate · "should we even build this?" · blunt YAGNI + scope, at any stage</text>
+  <g font-size="9" letter-spacing=".06em">
+    <rect x="612" y="346" width="66" height="20" rx="3" fill="none" stroke="#7ee0a6" stroke-opacity=".7"/><text x="645" y="360" text-anchor="middle" fill="#7ee0a6">PROCEED</text>
+    <rect x="686" y="346" width="90" height="20" rx="3" fill="none" stroke="#ffcf6b" stroke-opacity=".7"/><text x="731" y="360" text-anchor="middle" fill="#ffcf6b">NEEDS WORK</text>
+    <rect x="784" y="346" width="72" height="20" rx="3" fill="none" stroke="#ff9b8a" stroke-opacity=".8"/><text x="820" y="360" text-anchor="middle" fill="#ff9b8a">RETHINK</text>
+  </g>
+
+  <!-- footer note -->
+  <text x="42" y="466" class="dim" font-size="11">Each stage hands its artifact to the next.</text>
+  <text x="42" y="482" class="dim" font-size="11">Nothing is built before the skeptic passes.</text>
+
+  <!-- title block -->
+  <g>
+    <rect x="628" y="432" width="330" height="54" fill="#06233b" fill-opacity=".5" stroke="#bfe4ff" stroke-opacity=".5"/>
+    <line x1="628" y1="450" x2="958" y2="450" stroke="#bfe4ff" stroke-opacity=".3"/>
+    <line x1="628" y1="468" x2="958" y2="468" stroke="#bfe4ff" stroke-opacity=".3"/>
+    <line x1="712" y1="432" x2="712" y2="486" stroke="#bfe4ff" stroke-opacity=".3"/>
+    <line x1="800" y1="432" x2="800" y2="486" stroke="#bfe4ff" stroke-opacity=".3"/>
+    <line x1="884" y1="432" x2="884" y2="486" stroke="#bfe4ff" stroke-opacity=".3"/>
+    <text x="636" y="445" class="tb">SUITE</text><text x="720" y="446" class="tv">planning-skills</text>
+    <text x="636" y="463" class="tb">DRAWN</text><text x="720" y="464" class="tv">maccydee</text>
+    <text x="636" y="481" class="tb">REV</text><text x="720" y="482" class="tv">1.0</text>
+    <text x="808" y="445" class="tb">SCALE</text><text x="892" y="446" class="tv">NTS</text>
+    <text x="808" y="463" class="tb">SHEET</text><text x="892" y="464" class="tv">1 / 1</text>
+    <text x="808" y="481" class="tb">LIC</text><text x="892" y="482" class="tv">MIT</text>
+  </g>
+</svg>
