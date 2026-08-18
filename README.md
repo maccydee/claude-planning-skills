@@ -1,5 +1,8 @@
 # Planning skills for Claude
 
+[![Claude skill](https://img.shields.io/badge/Claude-skills-8A2BE2.svg)](https://docs.claude.com/en/docs/claude-code/skills)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Four skills that take a piece of work from a fuzzy idea to shipped code, with a reviewer that keeps asking whether you should be building it at all.
 
 ![Workflow schematic](assets/workflow.svg)
